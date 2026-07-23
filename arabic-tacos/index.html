@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقهى الأمل - Café</title>
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fdfbf7;
+            color: #2c221e;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b120c;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d4a373;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4a373;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #faedcd;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: #d4a373;
+            color: #1b120c;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e9edc9;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1b120c;
+            border-bottom: 2px solid #d4a373;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .center-wrapper {
+            text-align: center;
+        }
+
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .menu-item {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-right: 4px solid #d4a373;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            color: #bc6c25;
+        }
+
+        /* Services / Features */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            background-color: #faedcd;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .feature-box {
+            flex: 1 1 200px;
+        }
+
+        /* Info & Location Section */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .info-card h3 {
+            margin-bottom: 1rem;
+            color: #bc6c25;
+        }
+
+        footer {
+            background-color: #1b120c;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">مقهى الأمل</div>
+        <nav>
+            <a href="#about">قصتنا</a>
+            <a href="#menu">القائمة</a>
+            <a href="#location">الموقع والساعات</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>كأس قهوة يغير يومك</h1>
+        <p>المكان المفضل للراحة والعمل. نقدم أجود أنواع القهوة المحمصة طازجاً يومياً.</p>
+        <a href="#menu" class="btn">استكشف القائمة</a>
+    </div>
+
+    <section>
+        <div class="features">
+            <div class="feature-box">
+                <h3>⚡ واي فاي سريع</h3>
+                <p>مثالي للعمل والدراسة</p>
+            </div>
+            <div class="feature-box">
+                <h3>☕ قهوة مختصة</h3>
+                <p>حبوب عالية الجودة</p>
+            </div>
+            <div class="feature-box">
+                <h3>🌿 جلسة مريحة</h3>
+                <p>أجواء هادئة ومميزة</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="center-wrapper">
+            <h2 class="section-title">قصتنا</h2>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            بدأنا بشغف بسيط: تقديم أفضل فنجان قهوة في المدينة. نختار حبوب القهوة بعناية فائقة ونحمصها محلياً لنضمن لك تجربة فريدة وطعم غني في كل زيارة.
+        </p>
+    </section>
+
+    <section id="menu">
+        <div class="center-wrapper">
+            <h2 class="section-title">قائمة المشروبات والحلويات</h2>
+        </div>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" alt="إسبراسو">
+                <div class="menu-item-header">
+                    <span>إسبراسو (Espresso)</span>
+                    <span class="price">15 د.م.</span>
+                </div>
+                <p>قهوة مركزة وغنية بالطعم</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="كابوتشينو">
+                <div class="menu-item-header">
+                    <span>كابوتشينو (Cappuccino)</span>
+                    <span class="price">20 د.م.</span>
+                </div>
+                <p>إسبراسو مع حليب مبخر ورغوة غنية</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="قهوة مبردة">
+                <div class="menu-item-header">
+                    <span>قهوة مبردة (Iced Latte)</span>
+                    <span class="price">25 د.م.</span>
+                </div>
+                <p>قهوة مثلجة مع الحليب الطازج</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="كرواسون طازج">
+                <div class="menu-item-header">
+                    <span>كرواسون طازج</span>
+                    <span class="price">12 د.م.</span>
+                </div>
+                <p>محضر يومياً بالزبدة الطبيعية</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80" alt="كعكة الشوكولاتة">
+                <div class="menu-item-header">
+                    <span>كعكة الشوكولاتة</span>
+                    <span class="price">22 د.م.</span>
+                </div>
+                <p>قطعة كيك غنية بالشوكولاتة الداكنة</p>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="شاي بالنعناع المغربي">
+                <div class="menu-item-header">
+                    <span>شاي بالنعناع المغربي</span>
+                    <span class="price">10 د.م.</span>
+                </div>
+                <p>شاي تقليدي منعش</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="center-wrapper">
+            <h2 class="section-title">الموقع وساعات العمل</h2>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>ساعات العمل</h3>
+                <p><strong>الإثنين - الجمعة:</strong> 07:00 صباحاً - 11:00 مساءً</p>
+                <p><strong>السبت - الأحد:</strong> 08:00 صباحاً - 12:00 ليلاً</p>
+            </div>
+
+            <div class="info-card">
+                <h3>العنوان والتواصل</h3>
+                <p>شارع قصبة تادلة </p>
+                <p><strong>الهاتف:</strong> 0628547444</p>
+                <p><strong>البريد الإلكتروني:</strong> cafe.tadla@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة لمقهى الأمل.</p>
+    </footer>
+
+</body>
+</html>
