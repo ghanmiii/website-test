@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Restaurant - Menu</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="menu-container">
+    
+    <!-- PANEL IZQUIERDO FIJO -->
+    <aside class="static-panel">
+      <header class="header">
+        <div class="lang-switch">
+          <button onclick="changeLanguage('fr')">FR</button>
+          <button onclick="changeLanguage('ar')">العربية</button>
+        </div>
+      </header>
+      
+      <h1 id="title" class="main-title">Le Restaurant</h1>
+
+      <nav class="main-nav">
+        <a href="#about" id="nav-about">Notre Histoire</a>
+        <a href="#menu" id="nav-menu">Le Menu</a>
+        <a href="#contact" id="nav-contact">Contact</a>
+      </nav>
+      
+      <div class="illustration-container">
+        <!-- Vuelto al nombre original del archivo -->
+        <img src="Gemini_Generated_Image_ouhrasouhrasouhr.png" alt="Ilustración du restaurant" class="static-img">
+      </div>
+    </aside>
+
+    <!-- PANEL DERECHO DESPLAZABLE -->
+    <main class="scrollable-panel" id="main-scroll">
+      
+      <section id="about" class="content-section">
+        <h2 id="about-title" class="section-title">Notre Histoire</h2>
+        <p id="about-text" class="section-text">
+          Bienvenue dans notre restaurant. Un lieu où la haute cuisine rencontre l'élégance. 
+          Nous préparons chaque plat avec passion pour vous offrir une expérience inoubliable.
+        </p>
+      </section>
+
+      <section id="menu" class="content-section">
+        <h2 id="menu-title" class="section-title">Plats Principaux</h2>
+        
+        <div class="menu-grid">
+          <!-- Plato 1 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish1-title">Entrecôte au Poivre</h3>
+            <p class="dish-desc" id="dish1-desc">Entrecôte grillée avec sauce au poivre noir et pommes de terre.</p>
+            <div class="dish-footer">
+              <span class="dish-price">240 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">12</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 2 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish2-title">Saumon Grillé</h3>
+            <p class="dish-desc" id="dish2-desc">Filet de saumon frais, asperges et sauce au citron.</p>
+            <div class="dish-footer">
+              <span class="dish-price">185 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">8</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 3 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish3-title">Risotto aux Champignons</h3>
+            <p class="dish-desc" id="dish3-desc">Risotto crémeux aux champignons sauvages et parmesan.</p>
+            <div class="dish-footer">
+              <span class="dish-price">160 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">25</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 4 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish4-title">Salade César</h3>
+            <p class="dish-desc" id="dish4-desc">Laitue romaine, poulet rôti, croûtons et sauce César.</p>
+            <div class="dish-footer">
+              <span class="dish-price">120 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">4</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 5 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish5-title">Tajine de Poulet</h3>
+            <p class="dish-desc" id="dish5-desc">Tajine traditionnel au poulet, citrons confits et olives.</p>
+            <div class="dish-footer">
+              <span class="dish-price">150 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">42</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 6 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish6-title">Couscous Royal</h3>
+            <p class="dish-desc" id="dish6-desc">Couscous aux sept légumes avec viande de bœuf et merguez.</p>
+            <div class="dish-footer">
+              <span class="dish-price">195 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">56</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 7 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish7-title">Pastilla au Poulet</h3>
+            <p class="dish-desc" id="dish7-desc">Feuilleté sucré-salé aux amandes et à la volaille.</p>
+            <div class="dish-footer">
+              <span class="dish-price">140 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">30</small></button>
+            </div>
+          </div>
+
+          <!-- Plato 8 -->
+          <div class="menu-card">
+            <h3 class="dish-title" id="dish8-title">Thé à la Menthe</h3>
+            <p class="dish-desc" id="dish8-desc">Thé vert traditionnel marocain à la menthe fraîche.</p>
+            <div class="dish-footer">
+              <span class="dish-price">45 dh</span>
+              <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">♡</span> <small class="like-count">88</small></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section">
+        <h2 id="contact-title" class="section-title">Contactez-nous</h2>
+        <p class="section-text" style="line-height: 2.5;">
+          <a href="https://www.google.com/maps?q=32.342601,-6.362294" target="_blank" class="contact-link" id="contact-map">
+            📍 Beni Mellal, Maroc (Voir sur la carte)
+          </a><br>
+          <a href="https://wa.me/212628547444" target="_blank" class="contact-link" id="contact-wa">
+            📞 WhatsApp: +212 628-547444
+          </a><br>
+          <span id="contact-mail">✉️ reservations@lerestaurant.com</span>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Botón de subir arriba -->
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const translations = {
+      fr: {
+        dir: "ltr", title: "Le Restaurant", navAbout: "Notre Histoire", navMenu: "Le Menu", navContact: "Contact",
+        aboutTitle: "Notre Histoire", aboutText: "Bienvenue dans notre restaurant. Un lieu où la haute cuisine rencontre l'élégance. Nous préparons chaque plat avec passion pour vous offrir une expérience inoubliable.",
+        menuTitle: "Plats Principaux", contactTitle: "Contactez-nous", contactMap: "📍 Beni Mellal, Maroc (Voir sur la carte)",
+        contactWa: "📞 WhatsApp: +212 628-547444", contactMail: "✉️ reservations@lerestaurant.com",
+        dish1Title: "Entrecôte au Poivre", dish1Desc: "Entrecôte grillée avec sauce au poivre noir et pommes de terre.",
+        dish2Title: "Saumon Grillé", dish2Desc: "Filet de saumon frais, asperges et sauce au citron.",
+        dish3Title: "Risotto aux Champignons", dish3Desc: "Risotto crémeux aux champignons sauvages et parmesan.",
+        dish4Title: "Salade César", dish4Desc: "Laitue romaine, poulet rôti, croûtons et sauce César.",
+        dish5Title: "Tajine de Poulet", dish5Desc: "Tajine traditionnel au poulet, citrons confits et olives.",
+        dish6Title: "Couscous Royal", dish6Desc: "Couscous aux sept légumes avec viande de bœuf et merguez.",
+        dish7Title: "Pastilla au Poulet", dish7Desc: "Feuilleté sucré-salé aux amandes et à la volaille.",
+        dish8Title: "Thé à la Menthe", dish8Desc: "Thé vert traditionnel marocain à la menthe fraîche."
+      },
+      ar: {
+        dir: "rtl", title: "المطعم", navAbout: "قصتنا", navMenu: "القائمة", navContact: "اتصل بنا",
+        aboutTitle: "قصتنا", aboutText: "مرحباً بكم في مطعمنا. مكان يلتقي فيه فن الطهو الراقي بالأناقة. نحن نعد كل طبق بشغف لنقدم لك تجربة لا تُنسى.",
+        menuTitle: "الأطباق الرئيسية", contactTitle: "اتصل بنا", contactMap: "📍 بني ملال، المغرب (عرض على الخريطة)",
+        contactWa: "📞 واتساب: +212 628-547444", contactMail: "✉️ reservations@lerestaurant.com",
+        dish1Title: "إنتركوت بصلصة الفلفل", dish1Desc: "لحم إنتركوت مشوي مع صلصة الفلفل الأسود والبطاطس.",
+        dish2Title: "سلمون مشوي", dish2Desc: "فيليه سلمون طازج، هليون وصلصة الليمون.",
+        dish3Title: "ريزوتو بالفطر", dish3Desc: "ريزوتو كريمي مع الفطر البري وجبنة البارميزان.",
+        dish4Title: "سلطة سيزر", dish4Desc: "خس روماني، دجاج مشوي، خبز محمص وصلصة سيزر.",
+        dish5Title: "طاجين الدجاج", dish5Desc: "طاجين تقليدي بالدجاج والليمون المخلل والزيتون.",
+        dish6Title: "كسكس ملكي", dish6Desc: "كسكس بسبع خضار مع لحم البقر والمرقاز.",
+        dish7Title: "بسطيلة بالدجاج", dish7Desc: "فطيرة حلوة ومالحة باللوز والدجاج.",
+        dish8Title: "شاي بالنعناع", dish8Desc: "شاي أخضر مغربي تقليدي بالنعناع الطازج."
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = translations[lang].dir; 
+      
+      document.getElementById('title').innerText = translations[lang].title;
+      document.getElementById('nav-about').innerText = translations[lang].navAbout;
+      document.getElementById('nav-menu').innerText = translations[lang].navMenu;
+      document.getElementById('nav-contact').innerText = translations[lang].navContact;
+      document.getElementById('about-title').innerText = translations[lang].aboutTitle;
+      document.getElementById('about-text').innerText = translations[lang].aboutText;
+      document.getElementById('menu-title').innerText = translations[lang].menuTitle;
+      document.getElementById('contact-title').innerText = translations[lang].contactTitle;
+      document.getElementById('contact-map').innerText = translations[lang].contactMap;
+      document.getElementById('contact-wa').innerText = translations[lang].contactWa;
+      document.getElementById('contact-mail').innerText = translations[lang].contactMail;
+      
+      for(let i=1; i<=8; i++) {
+        document.getElementById('dish'+i+'-title').innerText = translations[lang]['dish'+i+'Title'];
+        document.getElementById('dish'+i+'-desc').innerText = translations[lang]['dish'+i+'Desc'];
+      }
+    }
+
+    function toggleLike(button) {
+      const icon = button.querySelector('.heart-icon');
+      const countSpan = button.querySelector('.like-count');
+      let currentCount = parseInt(countSpan.innerText);
+      if (button.classList.contains('liked')) {
+        button.classList.remove('liked');
+        icon.innerText = '♡'; countSpan.innerText = currentCount - 1;
+      } else {
+        button.classList.add('liked');
+        icon.innerText = '♥'; countSpan.innerText = currentCount + 1;
+      }
+    }
+
+    const scrollPanel = document.getElementById('main-scroll');
+    const backBtn = document.getElementById("backToTop");
+
+    function toggleBackToTop() {
+      if (document.documentElement.scrollTop > 300 || scrollPanel.scrollTop > 300) {
+        backBtn.style.display = "block";
+      } else {
+        backBtn.style.display = "none";
+      }
+    }
+
+    window.addEventListener('scroll', toggleBackToTop);
+    scrollPanel.addEventListener('scroll', toggleBackToTop);
+
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+      scrollPanel.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
+</body>
+</html>
